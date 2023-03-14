@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MainService} from "./main.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bengal-cats-web-shop-app';
+  constructor(private service: MainService) {
+    this.service.findAllCats().subscribe(data => console.log('cats = ',data))
+  }
 }
