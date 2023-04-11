@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {InfoCardComponent} from './info-card/info-card.component';
 import {CardModule} from "primeng/card";
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {CardModule} from "primeng/card";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CardModule
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
