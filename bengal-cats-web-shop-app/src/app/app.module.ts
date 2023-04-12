@@ -7,18 +7,22 @@ import {HttpClientModule} from "@angular/common/http";
 import {InfoCardComponent} from './info-card/info-card.component';
 import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
+import { UserRegisterComponent } from './user-register/user-register.component';
+import {InputTextModule} from "primeng/inputtext";
 
 @NgModule({
   declarations: [
     AppComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
