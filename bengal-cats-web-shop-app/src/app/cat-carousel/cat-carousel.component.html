@@ -1,0 +1,15 @@
+  <p-carousel [showIndicators]="false" [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <div class="p-card" style="margin: 20px; padding: 20px">
+        <div>
+          <img style="width: 100%" src="{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+        </div>
+        <div>
+          <h4 class="mb-1">{{ product.name }}</h4>
+          <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+          <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+

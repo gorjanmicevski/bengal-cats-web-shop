@@ -10,13 +10,17 @@ import {ButtonModule} from "primeng/button";
 import { UserRegisterComponent } from './user-register/user-register.component';
 import {InputTextModule} from "primeng/inputtext";
 import { NavbarComponent } from './navbar/navbar.component';
+import { CatCarouselComponent } from './cat-carousel/cat-carousel.component';
+import {CarouselModule} from "primeng/carousel";
+import {TagModule} from "primeng/tag";
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoCardComponent,
     UserRegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    CatCarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpClientModule,
     CardModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    CarouselModule,
+    TagModule
   ],
   providers: [],
   bootstrap: [AppComponent]
