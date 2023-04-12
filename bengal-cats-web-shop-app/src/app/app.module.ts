@@ -9,12 +9,14 @@ import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
 import { UserRegisterComponent } from './user-register/user-register.component';
 import {InputTextModule} from "primeng/inputtext";
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoCardComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

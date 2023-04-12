@@ -1,0 +1,11 @@
+span {
+  margin: 0 10px 0 10px;
+}
+.nav-items span {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(0,0,0,0);
+  &:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  }
+}
