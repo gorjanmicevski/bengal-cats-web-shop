@@ -1,0 +1,19 @@
+.footer {
+  padding-top: 3rem;
+  color: white;
+  line-height: 2rem;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+i {
+  margin: 1rem;
+}
