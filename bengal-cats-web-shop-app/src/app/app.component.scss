@@ -5,9 +5,14 @@
 }
 
 .general-content-wrapper {
-  margin: 2rem 5rem 2rem 5rem;
-  width: calc(100vw - 10rem);
-  padding: 0 2rem 0 2rem;
+  margin: 2rem 8rem 2rem 8rem;
+  width: calc(100vw - 16rem);
+  background: rgb(112,77,61);
+  background: linear-gradient(65deg, rgba(112,77,61,1) 0%, rgba(149,106,75,1) 100%);
+  border-radius: 3rem;
+}
+
+.general-content {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -15,4 +20,5 @@
   background-repeat: no-repeat;
   background-size: auto 100%;
   border-radius: 3rem;
+  padding: 0 2rem 0 2rem;
 }
