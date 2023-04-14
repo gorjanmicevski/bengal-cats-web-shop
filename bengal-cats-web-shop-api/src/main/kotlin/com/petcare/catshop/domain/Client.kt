@@ -1,13 +1,18 @@
 package com.petcare.catshop.domain
 
-import jakarta.persistence.Entity
-import jakarta.persistence.Table
+import jakarta.persistence.*
 
 @Entity
 @Table(name="clients")
-class Client (
+@SequenceGenerator(name = "clients_seq", sequenceName = "clients_id_seq", allocationSize = 1)
+data class Client (
+    @Column(name = "first_name")
     val firstName: String,
+    @Column(name = "last_name")
     val lastName: String,
     val email: String,
-    val nationality: String
-) : BaseEntity<Long>()
+    val nationality: String,
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "clients_seq")
+    val id: Long = 0L
+)

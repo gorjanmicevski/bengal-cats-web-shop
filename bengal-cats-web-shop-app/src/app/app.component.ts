@@ -11,7 +11,6 @@ export class AppComponent {
   @ViewChild("aboutUs") aboutUs: ElementRef
   title = 'bengal-cats-web-shop-app';
   constructor(private service: MainService) {
-    this.service.findAllCats().subscribe(data => console.log('cats = ',data))
   }
 
   handleNavItemClickEvent(navItem: string) {

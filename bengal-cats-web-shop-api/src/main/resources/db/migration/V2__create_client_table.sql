@@ -1,7 +1,8 @@
+drop table if exists clients;
 create table if not exists clients(
    id bigserial primary key,
-   firstName text not null,
-   lastName text not null,
+   first_name text not null,
+   last_name text not null,
    nationality text not null,
    email text not null
 )

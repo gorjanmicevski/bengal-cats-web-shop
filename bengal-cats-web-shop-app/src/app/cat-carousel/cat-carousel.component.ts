@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MainService} from "../main.service";
+import {map} from "rxjs";
 
 @Component({
   selector: 'app-cat-carousel',
@@ -7,33 +9,17 @@ import { Component } from '@angular/core';
 })
 export class CatCarouselComponent {
 
-  products = [
-    {
-      name: 'eaadds',
-      image: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg',
-      inventoryStatus: 'INSTOCK',
-      price: '1000'
-    },
-    {
-      name: 'eaadds',
-      image: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg',
-      inventoryStatus: 'LOWSTOCK',
-      price: '1000'
-    },
-    {
-      name: 'eaadds',
-      image: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg',
-      inventoryStatus: 'INSTOCK',
-      price: '1000'
-    },
-    {
-      name: 'eaadds',
-      image: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg',
-      inventoryStatus: 'OUTOFSTOCK',
-      price: '1000'
-    }
+  cats$ = this.service.findAllCats().pipe(map(data => {
+    return data.map(it => {
+      return {
+        ...it,
+        image: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg'
+      }
+    })
+  }))
+  constructor(private service: MainService) {
+  }
 
-  ]
   responsiveOptions = [
     {
       breakpoint: '1199px',

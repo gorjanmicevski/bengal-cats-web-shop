@@ -1,16 +1,17 @@
+<div *ngIf="cats$ | async as cats">
   <p-carousel
-    [showIndicators]="false" [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-    <ng-template let-product pTemplate="item">
+    [showIndicators]="false" [value]="cats" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+    <ng-template let-cat pTemplate="item">
       <div class="p-card" style="margin: 20px; padding: 20px">
         <div>
-          <img style="width: 100%" src="{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+          <img style="width: 100%" src="{{ cat.image }}" [alt]="cat.name" class="w-6 shadow-2" />
         </div>
         <div>
-          <h4 class="mb-1">{{ product.name }}</h4>
-          <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
-          <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+          <h4 class="mb-1">{{ cat.name }}</h4>
+          <h6 class="mt-0 mb-3">{{ '$' + cat.price }}</h6>
+            <p-tag [value]="cat.status" [severity]="getSeverity(cat.status)"></p-tag>
         </div>
       </div>
     </ng-template>
   </p-carousel>
-
+</div>

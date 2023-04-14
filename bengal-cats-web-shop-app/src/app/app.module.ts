@@ -15,6 +15,7 @@ import {CarouselModule} from "primeng/carousel";
 import {TagModule} from "primeng/tag";
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     ButtonModule,
     InputTextModule,
     CarouselModule,
-    TagModule
+    TagModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
