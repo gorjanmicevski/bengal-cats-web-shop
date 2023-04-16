@@ -6,10 +6,12 @@
         <div>
           <img style="width: 100%" src="{{ cat.image }}" [alt]="cat.name" class="w-6 shadow-2" />
         </div>
-        <div>
-          <h4 class="mb-1">{{ cat.name }}</h4>
-          <h6 class="mt-0 mb-3">{{ '$' + cat.price }}</h6>
-            <p-tag [value]="cat.status" [severity]="getSeverity(cat.status)"></p-tag>
+        <div style="display: flex; flex-direction: column">
+          <div style="display:flex; justify-content: space-between; padding: 1rem">
+            <h4 class="mb-1">{{ cat.name }}</h4>
+            <h4 class="mt-0 mb-3">{{ '$' + cat.price }}</h4>
+          </div>
+          <div>{{cat.description}}</div>
         </div>
       </div>
     </ng-template>

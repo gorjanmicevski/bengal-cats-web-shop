@@ -13,6 +13,6 @@ export class MainService {
   }
 
   registerClient(request: any) {
-    return this.http.post('http://localhost:8080/clients', request).subscribe()
+    return this.http.post('http://localhost:8080/clients', request)
   }
 }

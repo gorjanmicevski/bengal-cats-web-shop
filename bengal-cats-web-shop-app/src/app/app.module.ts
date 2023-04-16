@@ -16,6 +16,8 @@ import {TagModule} from "primeng/tag";
 import {AboutUsComponent} from './about-us/about-us.component';
 import {FooterComponent} from './footer/footer.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {RegisterStatusComponent} from './register-status/register-status.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     NavbarComponent,
     CatCarouselComponent,
     AboutUsComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterStatusComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     InputTextModule,
     CarouselModule,
     TagModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
