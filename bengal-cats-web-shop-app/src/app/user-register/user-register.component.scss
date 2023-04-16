@@ -12,9 +12,17 @@ p {
   padding: 10px;
   text-align: center;
   border-radius: 0.5rem;
+  border: none;
+  color: white;
+  font-family: MyFont;
   &:hover {
     cursor: pointer;
     background: rgb(205, 168, 115, 95%);
     color: rgba(255, 255, 255, 90%);
   }
+}
+
+.ng-submitted.ng-invalid.ng-dirty ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
 }

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {MainService} from "../main.service";
+import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-user-register',
@@ -8,17 +9,18 @@ import {MainService} from "../main.service";
 })
 export class UserRegisterComponent {
 
-  firstName = ''
-  lastName = ''
-  email = ''
+  form = this.builder.group({
+    firstName: [null, Validators.required],
+    lastName: [null, Validators.required],
+    email: [null, [Validators.required, Validators.email]]
+  })
 
-  constructor(private service: MainService) {
+  constructor(private service: MainService, private builder: FormBuilder) {
   }
 
   registerClient() {
-    this.service.registerClient({firstName: this.firstName, lastName: this.lastName, email: this.email})
-    this.firstName = ''
-    this.lastName = ''
-    this.email = ''
+    if (this.form.invalid) return
+    this.service.registerClient(this.form.value)
+    this.form.reset()
   }
 }

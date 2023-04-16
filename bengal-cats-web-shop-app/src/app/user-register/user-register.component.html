@@ -1,16 +1,14 @@
+<form [formGroup]="form" (submit)="registerClient()">
 <div style="display: flex; flex-direction: column; padding: 0 15px 0 15px; margin: 0 2rem 2rem 2rem">
   <p>Reserve a spot in the next litter!</p>
   <div style="display: flex; flex-direction: row; justify-content: space-between">
-      <input [(ngModel)]="firstName" type="text" pInputText placeholder="First Name" style="width:49%"/>
-      <input [(ngModel)]="lastName" type="text" pInputText placeholder="Last Name" style="width:49%"/>
+      <input formControlName="firstName" type="text" pInputText placeholder="First Name" style="width:49%"/>
+      <input formControlName="lastName" type="text" pInputText placeholder="Last Name" style="width:49%"/>
   </div>
   <div class="p-inputgroup" style="margin: 15px 0 15px 0">
     <span class="p-inputgroup-addon">  <i class="pi pi-inbox"></i></span>
-    <input [(ngModel)]="email" type="text" pInputText placeholder="example@example.com" />
+    <input formControlName="email" type="text" pInputText placeholder="example@example.com" />
   </div>
-  <div class="register-btn" (click)="registerClient()">
-    <span>
-    Register
-    </span>
-  </div>
+  <button class="register-btn"><span>Register</span></button>
 </div>
+</form>
