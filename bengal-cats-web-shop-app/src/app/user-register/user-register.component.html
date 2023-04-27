@@ -1,14 +1,29 @@
 <form [formGroup]="form" (submit)="registerClient()">
-<div style="display: flex; flex-direction: column; padding: 0 15px 0 15px; margin: 0 2rem 2rem 2rem">
-  <p>Reserve a spot in the next litter!</p>
-  <div style="display: flex; flex-direction: row; justify-content: space-between">
+<div style="display: flex; flex-direction: column; padding: 0 15px 0 15px; margin: 0 2rem 1rem 2rem">
+  <p>Want to adopt one of our kittens?</p>
+  <div style="display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 1rem">
       <input formControlName="firstName" type="text" pInputText placeholder="First Name" style="width:49%"/>
       <input formControlName="lastName" type="text" pInputText placeholder="Last Name" style="width:49%"/>
   </div>
-  <div class="p-inputgroup" style="margin: 15px 0 15px 0">
+  <div class="p-inputgroup" style="margin-bottom: 1rem">
     <span class="p-inputgroup-addon">  <i class="pi pi-inbox"></i></span>
     <input formControlName="email" type="text" pInputText placeholder="example@example.com" />
   </div>
+  <p-autoComplete formControlName="country"
+                  [dropdown]="true"
+                  [suggestions]="filteredCountries"
+                  (completeMethod)="filterCountries($event)"
+                  style="margin-bottom: 1rem"
+                  field="name"
+                  >
+    <ng-template let-country pTemplate="item">
+      <div style="display: flex; align-items: center">
+        <span [class]="'fi fi-' + country.code.toLowerCase()" style="width: 18px"></span>
+        <span style="margin-left: 1rem;">{{ country.name }}</span>
+      </div>
+    </ng-template>
+  </p-autoComplete>
+
   <button class="register-btn"><span>Register</span></button>
 </div>
 </form>

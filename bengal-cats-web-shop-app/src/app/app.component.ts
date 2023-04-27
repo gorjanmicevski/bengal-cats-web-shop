@@ -9,14 +9,16 @@ import {MainService} from "./main.service";
 export class AppComponent {
   @ViewChild("catCarousel") catCarousel: ElementRef
   @ViewChild("aboutUs") aboutUs: ElementRef
+  @ViewChild("footer") footer: ElementRef
   title = 'bengal-cats-web-shop-app';
   constructor(private service: MainService) {
   }
 
   handleNavItemClickEvent(navItem: string) {
     switch (navItem) {
-      case "Kittens" : this.catCarousel.nativeElement.scrollIntoView({behavior: 'smooth'}); break;
-      case "AboutUs" : this.aboutUs.nativeElement.scrollIntoView({behavior: 'smooth'});
+      case "Gallery" : this.catCarousel.nativeElement.scrollIntoView({behavior: 'smooth'}); break;
+      case "AboutUs" : this.aboutUs.nativeElement.scrollIntoView({behavior: 'smooth'}); break;
+      case "Register" : this.footer.nativeElement.scrollIntoView({behavior: 'smooth'});
     }
   }
 }

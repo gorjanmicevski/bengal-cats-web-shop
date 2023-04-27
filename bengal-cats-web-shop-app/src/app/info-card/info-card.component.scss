@@ -1,3 +1,6 @@
 :host ::ng-deep .p-card {
-  width: 40%
+  width: 60%
+}
+:host ::ng-deep .p-card-title {
+  color: rgb(205, 168, 115);
 }

@@ -9,5 +9,5 @@ import org.springframework.stereotype.Service
 class ClientService(val repository: ClientRepository) {
     fun findAll() = repository.findAll()
     fun registerClient(request: ClientRegisterRequest) =
-        repository.save(Client(request.firstName, request.lastName, request.email, "mkd"))
+        repository.save(Client(request.firstName, request.lastName, request.email, request.country))
 }

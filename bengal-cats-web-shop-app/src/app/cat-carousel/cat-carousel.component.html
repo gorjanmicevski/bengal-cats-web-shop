@@ -1,19 +1,72 @@
-<div *ngIf="cats$ | async as cats">
-  <p-carousel
-    [showIndicators]="false" [value]="cats" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-    <ng-template let-cat pTemplate="item">
-      <div class="p-card" style="margin: 20px; padding: 20px">
-        <div>
-          <img style="width: 100%" src="{{ cat.image }}" [alt]="cat.name" class="w-6 shadow-2" />
-        </div>
-        <div style="display: flex; flex-direction: column">
-          <div style="display:flex; justify-content: space-between; padding: 1rem">
-            <h4 class="mb-1">{{ cat.name }}</h4>
-            <h4 class="mt-0 mb-3">{{ '$' + cat.price }}</h4>
-          </div>
-          <div>{{cat.description}}</div>
-        </div>
-      </div>
-    </ng-template>
-  </p-carousel>
+<div style="background: white; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 2rem; margin-bottom: 5rem">
+  <span style="font-size: xxx-large; color: rgb(205, 168, 115);">Our Bengals</span>
 </div>
+<div style="display: flex; justify-content: center">
+  <div class="wrapper-card" style="width: 30%">
+    <img style="width: 100%" src="assets/cats/DSC_5385.jpg">
+  </div>
+  <div class="wrapper-card" style="width: 30%">
+    <img style="width: 100%" src="assets/cats/DSC_5217.jpg">
+  </div>
+</div>
+<div style="display: flex; justify-content: center">
+  <div style="display: flex;flex-direction: column; width: 20%">
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5078%20(1).jpg">
+    </div>
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5011%20(1).jpg">
+    </div>
+  </div>
+  <div style="display: flex;flex-direction: column; width: 30%">
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5059.jpg">
+    </div>
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5135%20(1).jpg">
+    </div>
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_0988.jpg">
+    </div>
+  </div>
+  <div style="display: flex;flex-direction: column; width: 20%">
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5090%20(1).jpg">
+    </div>
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5127.jpg">
+    </div>
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5132%20(1).jpg">
+    </div>
+
+  </div>
+  <div style="display: flex;flex-direction: column; width: 20%">
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_0997.jpg">
+    </div>
+    <div class="wrapper-card">
+      <img style="width: 100%" src="assets/cats/DSC_5004%20(1).jpg">
+    </div>
+  </div>
+</div>
+
+<!--<div *ngIf="cats$ | async as cats">-->
+<!--  <p-carousel-->
+<!--    [showIndicators]="false" [value]="cats" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">-->
+<!--    <ng-template let-cat pTemplate="item">-->
+<!--      <div class="p-card" style="margin: 20px; padding: 20px">-->
+<!--        <div>-->
+<!--          <img style="width: 100%" src="{{ cat.image }}" [alt]="cat.name" class="w-6 shadow-2"/>-->
+<!--        </div>-->
+<!--        <div style="display: flex; flex-direction: column">-->
+<!--          <div style="display:flex; justify-content: space-between; padding: 1rem">-->
+<!--            <h4 class="mb-1">{{ cat.name }}</h4>-->
+<!--            <h4 class="mt-0 mb-3">{{ '$' + cat.price }}</h4>-->
+<!--          </div>-->
+<!--          <div>{{cat.description}}</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </ng-template>-->
+<!--  </p-carousel>-->
+<!--</div>-->

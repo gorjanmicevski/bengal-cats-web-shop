@@ -6,23 +6,18 @@ p {
   font-size: xx-large;
 }
 
-.register-btn {
-  background: rgb(205, 168, 115);
-  font-size: 1.5rem;
-  padding: 10px;
-  text-align: center;
-  border-radius: 0.5rem;
-  border: none;
-  color: white;
-  font-family: MyFont;
-  &:hover {
-    cursor: pointer;
-    background: rgb(205, 168, 115, 95%);
-    color: rgba(255, 255, 255, 90%);
-  }
-}
-
 .ng-submitted.ng-invalid.ng-dirty ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: red;
   opacity: 1; /* Firefox */
+}
+
+:host ::ng-deep .p-autocomplete  {
+  width: 100%;
+}
+:host ::ng-deep .p-autocomplete input {
+  width: 100%
+}
+:host ::ng-deep .p-autocomplete .p-button {
+  background: rgb(205, 168, 115);
+  border: 1px solid rgb(205, 168, 115)
 }

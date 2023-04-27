@@ -1,11 +1,11 @@
 .footer {
-  padding-top: 3rem;
+  padding: 1rem 5rem 0 5rem;
   color: white;
   line-height: 2rem;
   width: 100%;
-  height: 300px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-col {

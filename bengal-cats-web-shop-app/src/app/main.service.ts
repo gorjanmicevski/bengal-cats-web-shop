@@ -15,4 +15,11 @@ export class MainService {
   registerClient(request: any) {
     return this.http.post('http://localhost:8080/clients', request)
   }
+
+  getCountries() {
+    return this.http.get<any[]>('https://rest-country-api.p.rapidapi.com/',{headers: {
+        'X-RapidAPI-Key': 'da63dff341mshc2419b9864cae4bp1ed7e4jsn039b8b4e5c75',
+        'X-RapidAPI-Host': 'rest-country-api.p.rapidapi.com'
+      }})
+  }
 }

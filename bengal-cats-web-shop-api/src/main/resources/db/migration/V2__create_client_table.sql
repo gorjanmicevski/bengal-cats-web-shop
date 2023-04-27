@@ -3,6 +3,6 @@ create table if not exists clients(
    id bigserial primary key,
    first_name text not null,
    last_name text not null,
-   nationality text not null,
+   country text not null,
    email text not null
 )

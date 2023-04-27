@@ -11,7 +11,7 @@ data class Client (
     @Column(name = "last_name")
     val lastName: String,
     val email: String,
-    val nationality: String,
+    val country: String,
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "clients_seq")
     val id: Long = 0L

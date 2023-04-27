@@ -18,6 +18,8 @@ import {FooterComponent} from './footer/footer.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {RegisterStatusComponent} from './register-status/register-status.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {AutoCompleteModule} from "primeng/autocomplete";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     CarouselModule,
     TagModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    AutoCompleteModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
