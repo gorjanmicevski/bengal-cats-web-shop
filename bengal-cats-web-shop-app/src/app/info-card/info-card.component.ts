@@ -19,7 +19,7 @@ export class InfoCardComponent implements OnInit {
   }
 
   adopt() {
-    this.mainService.findAllCats()
+    // this.mainService.findAllCats()
     this.callToActionClicked.emit()
   }
 }

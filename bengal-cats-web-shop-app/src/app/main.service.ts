@@ -13,7 +13,7 @@ export class MainService {
   }
 
   registerClient(request: any) {
-    return this.http.post('api/clients', request)
+    return this.http.post('/api/clients', request)
   }
 
   getCountries() {
