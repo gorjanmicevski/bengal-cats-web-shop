@@ -1,12 +1,38 @@
+@media (max-width: 767px) {
+  .nav-bar {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+    padding-left: 8rem
+  }
+
+  .nav-items {
+    padding-right: 7rem;
+  }
+}
+
 span {
   margin: 0 10px 0 10px;
 }
-.nav-items {
-  padding-right: 7rem;
-}
+
 .nav-items span {
   padding-bottom: 5px;
-  border-bottom: 1px solid rgb(0,0,0,0);
+  border-bottom: 1px solid rgb(0, 0, 0, 0);
+
   &:hover {
     border-bottom: 1px solid white;
     cursor: pointer;

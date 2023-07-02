@@ -1,5 +1,6 @@
-<div style="background: white; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 5rem">
+<div class="about-us-wrapper">
   <span style="font-size: xxx-large; color: rgb(205, 168, 115);">About Us</span>
+  <ng-container *ngIf="isDesktop; else mobile">
   <div style="width: 100%; line-height: 2rem;display: flex; flex-direction: column">
     <div style="display: flex;">
       <p style="width: 50%; padding: 1rem">
@@ -35,4 +36,38 @@
       </p>
     </div>
   </div>
+  </ng-container>
+  <ng-template #mobile>
+    <div style="width: 100%; line-height: 2rem;display: flex; flex-direction: column">
+        <p style="">
+          <span style="font-size: x-large; color: rgb(205, 168, 115);">Origins</span><br>
+          Welcome to PetCare, a family-owned Bengal cattery located in Skopje. Our love for Bengals began when we adopted
+          our first kitten, Gucci, and fell in love with her unique personality, striking appearance, and playful nature.
+          Growing up with a veterinarian as a father and being surrounded by animals, we have always had a deep
+          appreciation and love for animals.
+        </p>
+        <p style="">
+          <span style="font-size: x-large; color: rgb(205, 168, 115);">Becoming Breeders</span><br>
+          As our passion for Bengals grew, we decided to become breeders and provide others with the joy of owning a
+          Bengal cat. At PetCare, we are dedicated to breeding healthy and well-socialized Bengal kittens that will make
+          excellent pets. Our cats are kept in a home environment and are given plenty of love and attention to ensure
+          they are well socialized.
+        </p>
+        <p style=" ">
+          <span style="font-size: x-large; color: rgb(205, 168, 115);">Medical Care</span> <br>
+          We take great pride in our breeding program and ensure that all of our cats meet our strict standards for
+          health, temperament, and appearance. We work closely with our veterinarian, and our cats receive regular
+          check-ups and vaccinations.
+        </p>
+        <p style="">
+          <span style="font-size: x-large; color: rgb(205, 168, 115);">Why choose PetCare?</span><br>
+          When you choose PetCare as your Bengal cattery, you can rest assured that you are getting a beautiful and
+          healthy kitten that has been bred with love and care. Our cats are raised in a home environment and given plenty
+          of love, attention and medical care to ensure that they are well-socialized, healthy and ready to become part of
+          your family. We take
+          great pride in our breeding program and are committed to providing our customers with the best possible
+          experience.
+        </p>
+    </div>
+  </ng-template>
 </div>

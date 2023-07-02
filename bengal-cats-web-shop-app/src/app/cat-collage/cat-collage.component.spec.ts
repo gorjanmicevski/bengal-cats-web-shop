@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CatCarouselComponent } from './cat-carousel.component';
+import { CatCollageComponent } from './cat-collage.component';
 
 describe('CatCarouselComponent', () => {
-  let component: CatCarouselComponent;
-  let fixture: ComponentFixture<CatCarouselComponent>;
+  let component: CatCollageComponent;
+  let fixture: ComponentFixture<CatCollageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CatCarouselComponent ]
+      declarations: [ CatCollageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CatCarouselComponent);
+    fixture = TestBed.createComponent(CatCollageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

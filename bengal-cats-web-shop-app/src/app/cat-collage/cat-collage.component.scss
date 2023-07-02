@@ -1,0 +1,45 @@
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
+  background: white;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+  background: white;
+}
+
+.wrapper-card {
+  background: #d7d7d7;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .our-bengals-header {
+    font-size: xx-large;
+    color: rgb(205, 168, 115);
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  :host ::ng-deep .p-carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .our-bengals-header {
+    font-size: xxx-large;
+    color: rgb(205, 168, 115);
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 5rem
+  }
+}

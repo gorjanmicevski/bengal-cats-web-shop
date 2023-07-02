@@ -1,11 +1,10 @@
-<div style="width: 100%; color: white;display: flex; justify-content: space-between;
-align-items: center; margin: 2rem 0 2rem 0; padding-left: 1rem">
+<div class="nav-bar">
   <div style="font-size: 1.5rem; display: flex; align-items: center">
     <img style="height: 2.2rem" src="assets/bengal-cat.png"/>
     <span>PetCare</span></div>
   <div class="nav-items">
-    <span (click)="navItemClick('Gallery')">Gallery</span>
-    <span (click)="navItemClick('AboutUs')">About us</span>
+    <span *ngIf="isDesktop" (click)="navItemClick('Gallery')">Gallery</span>
+    <span *ngIf="isDesktop" (click)="navItemClick('AboutUs')">About us</span>
     <span (click)="navItemClick('Register')">Adopt</span>
   </div>
 </div>

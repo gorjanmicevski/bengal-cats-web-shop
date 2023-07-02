@@ -1,37 +1,64 @@
-<app-navbar (navItemClickEvent)="handleNavItemClickEvent($event)"></app-navbar>
-<div class="general-content-wrapper">
-  <img src="/assets/background-cat.png" style="width: 50%; border-radius: 3rem 0 0 3rem">
-  <app-info-card class="general-content" (callToActionClicked)="handleNavItemClickEvent('Register')"></app-info-card>
+<ng-container *ngIf="isDesktop; else mobile">
+  <app-navbar (navItemClickEvent)="handleNavItemClickEvent($event)"></app-navbar>
+  <div class="general-content-wrapper">
+    <img src="/assets/background-cat.png" style="width: 50%; border-radius: 3rem 0 0 3rem">
+    <app-info-card class="general-content" (callToActionClicked)="handleNavItemClickEvent('Register')"></app-info-card>
+    <!--  <app-user-register></app-user-register>-->
+    <!--  <p style="width: 60%">-->
+    <!--    Bengal cats are truly magnificent creatures that capture the hearts of everyone they meet. With their unique coat-->
+    <!--    patterns, athletic build, and playful nature, it's no wonder why they are one of the most sought-after breeds.-->
 
-  <!--  <app-user-register></app-user-register>-->
-<!--  <p style="width: 60%">-->
-<!--    Bengal cats are truly magnificent creatures that capture the hearts of everyone they meet. With their unique coat-->
-<!--    patterns, athletic build, and playful nature, it's no wonder why they are one of the most sought-after breeds.-->
+    <!--    Bengals are known for their intelligence and inquisitive personalities, often compared to that of a dog. They love-->
+    <!--    to play and interact with their owners, making them the perfect addition to any family. With their wild ancestry,-->
+    <!--    they possess a natural grace and agility that is simply mesmerizing to watch.-->
 
-<!--    Bengals are known for their intelligence and inquisitive personalities, often compared to that of a dog. They love-->
-<!--    to play and interact with their owners, making them the perfect addition to any family. With their wild ancestry,-->
-<!--    they possess a natural grace and agility that is simply mesmerizing to watch.-->
+    <!--    One of the most distinctive features of a Bengal is their coat, which comes in a range of colors, from classic-->
+    <!--    brown tabby to silver, charcoal, and even snow. Their coats are adorned with stunning spots or marbled patterns,-->
+    <!--    which make them look like miniature leopards roaming through your home.-->
 
-<!--    One of the most distinctive features of a Bengal is their coat, which comes in a range of colors, from classic-->
-<!--    brown tabby to silver, charcoal, and even snow. Their coats are adorned with stunning spots or marbled patterns,-->
-<!--    which make them look like miniature leopards roaming through your home.-->
+    <!--    But the Bengal's beauty is not just skin deep. They are also known for their friendly and loving personalities,-->
+    <!--    making them great companions for both adults and children. They are affectionate and social creatures, always-->
+    <!--    eager to spend time with their humans.-->
 
-<!--    But the Bengal's beauty is not just skin deep. They are also known for their friendly and loving personalities,-->
-<!--    making them great companions for both adults and children. They are affectionate and social creatures, always-->
-<!--    eager to spend time with their humans.-->
+    <!--    In short, a Bengal cat is not just a pet, but a lifelong friend and companion. With their unique personalities,-->
+    <!--    stunning appearance, and playful nature, they are sure to capture your heart and bring joy and happiness to your-->
+    <!--    home.-->
+    <!--  </p>-->
+  </div>
 
-<!--    In short, a Bengal cat is not just a pet, but a lifelong friend and companion. With their unique personalities,-->
-<!--    stunning appearance, and playful nature, they are sure to capture your heart and bring joy and happiness to your-->
-<!--    home.-->
-<!--  </p>-->
-</div>
+  <div #catCollage style="margin: 8rem 0 8rem 0">
+    <app-cat-carousel></app-cat-carousel>
+  </div>
+  <div #aboutUs>
+    <app-about-us></app-about-us>
+  </div>
+  <div #footer>
+    <app-footer></app-footer>
+  </div>
+</ng-container>
+<ng-template #mobile>
+  <app-navbar (navItemClickEvent)="handleNavItemClickEvent($event)"></app-navbar>
+<!--  <div class="general-content-wrapper">-->
+<!--    <img src="/assets/background-cat.png" style="width: 50%; border-radius: 3rem 0 0 3rem">-->
+<!--    <app-info-card class="general-content" (callToActionClicked)="handleNavItemClickEvent('Register')"></app-info-card>-->
+<!--  </div>-->
+  <div style="position: relative">
+    <img src="/assets/background-cat.png" style="width: 100%; border-radius: 5px">
+    <div style="position: absolute; bottom: 0;
+     background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 85%, rgba(255,255,255,0) 100%);
+padding-top: 2rem" >
+      <app-info-card></app-info-card>
+    </div >
+  </div>
 
-<div #catCarousel style="margin: 8rem 0 8rem 0">
-  <app-cat-carousel></app-cat-carousel>
-</div>
-<div #aboutUs>
-  <app-about-us></app-about-us>
-</div>
-<div #footer>
-  <app-footer></app-footer>
-</div>
+  <div #catCollage>
+    <app-cat-carousel></app-cat-carousel>
+  </div>
+  <div #aboutUs>
+    <app-about-us></app-about-us>
+  </div>
+  <div #footer>
+    <app-footer></app-footer>
+  </div>
+</ng-template>

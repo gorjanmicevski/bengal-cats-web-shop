@@ -1,5 +1,6 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {MainService} from "./main.service";
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,17 @@ import {MainService} from "./main.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @ViewChild("catCarousel") catCarousel: ElementRef
+  @ViewChild("catCollage") catCarousel: ElementRef
   @ViewChild("aboutUs") aboutUs: ElementRef
   @ViewChild("footer") footer: ElementRef
   title = 'bengal-cats-web-shop-app';
-  constructor(private service: MainService) {
+
+  isMobile = this.deviceService.isMobile();
+  isTablet = this.deviceService.isTablet();
+  isDesktop = this.deviceService.isDesktop();
+
+  constructor(private service: MainService, private deviceService: DeviceDetectorService) {
+    console.log('hello `Home` component');
   }
 
   handleNavItemClickEvent(navItem: string) {

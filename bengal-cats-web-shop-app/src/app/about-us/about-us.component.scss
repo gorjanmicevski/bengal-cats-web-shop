@@ -1,6 +1,30 @@
 :host ::ng-deep .p-card {
   width: 80%;
+
   p {
     font-size: x-large;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us-wrapper {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-us-wrapper {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem
   }
 }

@@ -1,3 +1,19 @@
+@media (max-width: 767px) {
+  .user-register-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .user-register-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    margin: 0 2rem 1rem 2rem
+  }
+}
 :host {
   color: white;
 }
@@ -11,12 +27,14 @@ p {
   opacity: 1; /* Firefox */
 }
 
-:host ::ng-deep .p-autocomplete  {
+:host ::ng-deep .p-autocomplete {
   width: 100%;
 }
+
 :host ::ng-deep .p-autocomplete input {
   width: 100%
 }
+
 :host ::ng-deep .p-autocomplete .p-button {
   background: rgb(205, 168, 115);
   border: 1px solid rgb(205, 168, 115)

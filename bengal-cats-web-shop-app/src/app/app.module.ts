@@ -10,7 +10,7 @@ import {ButtonModule} from "primeng/button";
 import {UserRegisterComponent} from './user-register/user-register.component';
 import {InputTextModule} from "primeng/inputtext";
 import {NavbarComponent} from './navbar/navbar.component';
-import {CatCarouselComponent} from './cat-carousel/cat-carousel.component';
+import {CatCollageComponent} from './cat-collage/cat-collage.component';
 import {CarouselModule} from "primeng/carousel";
 import {TagModule} from "primeng/tag";
 import {AboutUsComponent} from './about-us/about-us.component';
@@ -20,6 +20,7 @@ import {RegisterStatusComponent} from './register-status/register-status.compone
 import {MatDialogModule} from "@angular/material/dialog";
 import {AutoCompleteModule} from "primeng/autocomplete";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -27,25 +28,26 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     InfoCardComponent,
     UserRegisterComponent,
     NavbarComponent,
-    CatCarouselComponent,
+    CatCollageComponent,
     AboutUsComponent,
     FooterComponent,
     RegisterStatusComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    CardModule,
-    ButtonModule,
-    InputTextModule,
-    CarouselModule,
-    TagModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    AutoCompleteModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        CardModule,
+        ButtonModule,
+        InputTextModule,
+        CarouselModule,
+        TagModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        AutoCompleteModule,
+        BrowserAnimationsModule,
+        NgOptimizedImage
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

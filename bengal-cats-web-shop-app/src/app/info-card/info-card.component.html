@@ -1,5 +1,11 @@
-  <div style="margin: 2rem; padding: 2rem 1rem 1rem 2rem;">
-    <p style="color: white; font-size: 2.5rem; font-weight: bolder; line-height: 4rem">Discover the playful side of life with a Bengal by your side.</p>
-    <p style="color: white; font-size: 1.5rem; font-weight: bold; line-height: 3rem">Find your purrfect companion with PetCare.</p>
-    <button class="register-btn" (click)="adopt()"><span>Adopt a Kitten</span></button>
-  </div>
+<div *ngIf="isDesktop; else mobileView" style="margin: 2rem; padding: 2rem 1rem 1rem 2rem;">
+  <p style="color: white; font-size: 2.5rem; font-weight: bolder; line-height: 4rem">Discover the playful side of life
+    with a Bengal by your side.</p>
+  <p style="color: white; font-size: 1.5rem; font-weight: bold; line-height: 3rem">Find your purrfect companion with
+    PetCare.</p>
+  <button class="register-btn" (click)="adopt()"><span>Adopt a Kitten</span></button>
+</div>
+<ng-template #mobileView>
+  <div style="font-family: 'HoneyStar'; color: rgb(205, 168, 115); font-size: 3rem; text-align:center;">Find your purrfect companion with
+    PetCare.</div>
+</ng-template>

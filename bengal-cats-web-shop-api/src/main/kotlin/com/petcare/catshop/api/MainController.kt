@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
-@RestController
+@RestController("/api")
 @CrossOrigin(origins = ["http://localhost:4200"])
 class MainController(val catService: CatService, val clientService: ClientService) {
     @GetMapping("/cats")
