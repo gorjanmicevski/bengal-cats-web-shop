@@ -11,13 +11,7 @@ export class CatCollageComponent {
   constructor(private deviceService: DeviceDetectorService) {
   }
 
-  cats = [
-    {
-      name: "asdsad",
-      image: "assets/cats/DSC_5078%20(1).jpg",
-      price: 123,
-      description: "asd"
-    },{
+  cats = [{
       name: "asdsad",
       image: "assets/cats/DSC_5011%20(1).jpg",
       price: 123,

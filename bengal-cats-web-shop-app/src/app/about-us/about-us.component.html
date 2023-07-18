@@ -1,7 +1,7 @@
 <div class="about-us-wrapper">
-  <span style="font-size: xxx-large; color: rgb(205, 168, 115); margin-bottom: 2rem">About Us</span>
   <ng-container *ngIf="isDesktop; else mobile">
-  <div style="width: 100%; line-height: 2rem;display: flex; flex-direction: column">
+    <span style="font-size: xxx-large; color: rgb(205, 168, 115); margin-bottom: 2rem">About Us</span>
+    <div style="width: 100%; line-height: 2rem;display: flex; flex-direction: column">
     <div style="display: flex;">
       <p style="width: 50%; padding: 1rem">
         <span style="font-size: x-large; color: rgb(205, 168, 115);">Origins</span><br>
@@ -38,6 +38,7 @@
   </div>
   </ng-container>
   <ng-template #mobile>
+    <span style="font-size: xx-large; color: rgb(205, 168, 115);">About Us</span>
     <div style="width: 100%; line-height: 2rem;display: flex; flex-direction: column">
         <p style="">
           <span style="font-size: x-large; color: rgb(205, 168, 115);">Origins</span><br>

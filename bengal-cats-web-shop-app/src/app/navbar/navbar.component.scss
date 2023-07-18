@@ -7,6 +7,15 @@
     align-items: center;
     padding: 15px;
   }
+
+  .petcare-logo {
+    display: flex;
+    align-items: center;
+    font-size:1.5rem;
+    img {
+      height: 2.5rem
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -23,6 +32,15 @@
   .nav-items {
     padding-right: 7rem;
     font-size: x-large;
+  }
+
+  .petcare-logo {
+    display: flex;
+    align-items: center;
+    font-size:2rem;
+    img {
+      height: 4rem
+    }
   }
 }
 

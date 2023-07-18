@@ -28,6 +28,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    background: rgb(205, 168, 115);
+  }
 }
 
 @media (min-width: 768px) {
